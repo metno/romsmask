@@ -302,7 +302,7 @@ class MainToolBar(object):
 	# Create a Basemap instance.
 	lonc=grd.lonr
         latc=grd.latr
-	self.m = Basemap(projection='lcc',lon_0=-25,lat_1=77.5,lat_2=77.5,\
+	self.m = Basemap(projection=str(self.proj),lon_0=lon0,lat_1=77.5,lat_2=77.5,\
                 llcrnrlat=latc[0,0],urcrnrlat=latc[-1,-1],\
                 llcrnrlon=lonc[0,0],urcrnrlon=lonc[-1,-1],\
                 rsphere=6371200.,resolution='i',ax=mplpanel.ax)
